@@ -1,0 +1,895 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+
+/* =================================
+   PAGE
+================================= */
+
+.admin-page {
+    min-height: 100vh;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    height: 76px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* Brand */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px rgba(79, 70, 229, 0.25);
+}
+
+.brand-text h2 {
+    font-size: 20px;
+    color: #111827;
+}
+
+.brand-text h2 span {
+    color: #6366f1;
+}
+
+.brand-text small {
+    display: block;
+
+    font-size: 10px;
+
+    color: #94a3b8;
+
+    margin-top: 1px;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.navigation a {
+    text-decoration: none;
+
+    color: #64748b;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 10px 15px;
+
+    border-radius: 9px;
+
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #4f46e5;
+
+    background: #eef2ff;
+}
+
+.navigation a.active {
+    color: #4f46e5;
+
+    background: #eef2ff;
+
+    font-weight: 600;
+}
+
+.navigation a.logout {
+    color: #ef4444;
+}
+
+.navigation a.logout:hover {
+    background: #fef2f2;
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.profile-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 25px 70px;
+}
+
+
+/* =================================
+   PAGE HEADING
+================================= */
+
+.page-heading {
+    margin-bottom: 30px;
+}
+
+.heading-label {
+    display: inline-block;
+
+    color: #6366f1;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    font-size: 34px;
+
+    color: #111827;
+
+    margin-bottom: 7px;
+}
+
+.page-heading p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =================================
+   PROFILE CARD
+================================= */
+
+.profile-card {
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid #e9edf4;
+
+    box-shadow:
+        0 20px 55px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =================================
+   PROFILE COVER
+================================= */
+
+.profile-cover {
+    height: 190px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #312e81,
+            #4f46e5,
+            #7c3aed
+        );
+}
+
+
+/* Decorative circles */
+
+.cover-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 30px solid rgba(255,255,255,0.07);
+}
+
+.circle-one {
+    width: 260px;
+    height: 260px;
+
+    right: -70px;
+    top: -140px;
+}
+
+.circle-two {
+    width: 180px;
+    height: 180px;
+
+    left: 20%;
+    bottom: -120px;
+
+    border-width: 25px;
+}
+
+.circle-three {
+    width: 120px;
+    height: 120px;
+
+    right: 35%;
+    top: 35px;
+
+    border-width: 18px;
+}
+
+
+/* =================================
+   PROFILE HEADER
+================================= */
+
+.profile-header {
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 40px;
+
+    position: relative;
+}
+
+
+/* Avatar */
+
+.admin-avatar {
+    width: 105px;
+    height: 105px;
+
+    margin-top: -55px;
+
+    border-radius: 24px;
+
+    border: 6px solid white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(79,70,229,0.25);
+}
+
+
+/* Name */
+
+.admin-name {
+    margin-top: 8px;
+}
+
+.admin-name h2 {
+    font-size: 25px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+.admin-name p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* Account status */
+
+.account-status {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px rgba(34,197,94,0.12);
+}
+
+
+/* =================================
+   SECTION
+================================= */
+
+.section {
+    margin: 25px 40px 0;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #edf0f5;
+}
+
+
+/* Section title */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 20px;
+}
+
+.title-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2ff;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+}
+
+.section-title h3 {
+    font-size: 18px;
+
+    color: #111827;
+
+    margin-bottom: 3px;
+}
+
+.section-title p {
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =================================
+   INFORMATION GRID
+================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 19px;
+
+    border: 1px solid #edf0f5;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 10px 25px rgba(79,70,229,0.08);
+}
+
+
+/* Info icon */
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.username-icon {
+    background: #eef2ff;
+}
+
+.email-icon {
+    background: #ecfeff;
+}
+
+.id-icon {
+    background: #fff7ed;
+}
+
+.role-icon {
+    background: #f5f3ff;
+}
+
+
+/* Info text */
+
+.info-content span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+
+    margin-bottom: 5px;
+}
+
+.info-content strong {
+    font-size: 15px;
+
+    color: #1e293b;
+
+    word-break: break-word;
+}
+
+.admin-role {
+    color: #6366f1 !important;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   PERMISSIONS
+================================= */
+
+.permission-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.permission-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 15px;
+
+    background: white;
+
+    transition: all 0.3s ease;
+}
+
+.permission-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(15,23,42,0.07);
+
+    border-color: #c7d2fe;
+}
+
+
+/* Permission icon */
+
+.permission-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 12px;
+
+    background: #f5f3ff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+/* Permission text */
+
+.permission-text {
+    flex: 1;
+}
+
+.permission-text strong {
+    display: block;
+
+    font-size: 14px;
+
+    color: #1e293b;
+
+    margin-bottom: 4px;
+}
+
+.permission-text span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #94a3b8;
+}
+
+
+/* Permission status */
+
+.permission-status {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    color: #16a34a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   SECURITY CARD
+================================= */
+
+.security-card {
+    margin: 30px 40px 0;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f7ff,
+            #f5f3ff
+        );
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 17px;
+}
+
+
+/* Security icon */
+
+.security-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 14px;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 5px 15px rgba(79,70,229,0.08);
+}
+
+
+/* Security text */
+
+.security-content {
+    flex: 1;
+}
+
+.security-content h3 {
+    font-size: 14px;
+
+    color: #312e81;
+
+    margin-bottom: 4px;
+}
+
+.security-content p {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #64748b;
+
+    max-width: 650px;
+}
+
+
+/* Security button */
+
+.security-button {
+    text-decoration: none;
+
+    background: #4f46e5;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.security-button:hover {
+    background: #4338ca;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.profile-footer {
+    margin: 30px 40px 0;
+
+    padding: 22px 0;
+
+    border-top: 1px solid #edf0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.profile-footer a {
+    text-decoration: none;
+
+    color: #6366f1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.profile-footer a:hover {
+    color: #4338ca;
+
+    transform: translateX(-3px);
+}
+
+.profile-footer span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navigation a {
+        padding: 8px;
+    }
+
+    .navigation a:not(.logout) {
+        display: none;
+    }
+
+    .profile-container {
+        padding: 35px 15px;
+    }
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .profile-cover {
+        height: 150px;
+    }
+
+    .profile-header {
+        padding: 0 22px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding-bottom: 25px;
+    }
+
+    .admin-avatar {
+        width: 90px;
+        height: 90px;
+
+        font-size: 34px;
+    }
+
+    .account-status {
+        margin-left: 0;
+    }
+
+    .section {
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .info-grid,
+    .permission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .security-card {
+        margin-left: 22px;
+        margin-right: 22px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .security-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .profile-footer {
+        margin-left: 22px;
+        margin-right: 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}

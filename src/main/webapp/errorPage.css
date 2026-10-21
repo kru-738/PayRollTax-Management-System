@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fff1f2 0%,
+            #f8fafc 40%,
+            #eef2f7 100%
+        );
+
+    color: #1f2937;
+}
+
+
+/* =========================================
+   ERROR CARD
+========================================= */
+
+.error-card {
+    width: 90%;
+    max-width: 560px;
+
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #fee2e2;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(31, 41, 55, 0.12),
+        0 5px 15px rgba(220, 38, 38, 0.05);
+
+    animation: cardAppear 0.5s ease-out;
+}
+
+
+/* =========================================
+   ERROR ICON
+========================================= */
+
+.error-icon {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff1f2;
+
+    border: 8px solid #fff7f7;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 8px 25px rgba(220, 38, 38, 0.12);
+
+    animation: iconPulse 2s infinite;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.error-card h2 {
+    font-size: 28px;
+
+    color: #1f2937;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-msg {
+    margin: 0 auto 30px;
+
+    padding: 16px 18px;
+
+    max-width: 450px;
+
+    background: #fff7f7;
+
+    border: 1px solid #fecaca;
+
+    border-left: 4px solid #dc2626;
+
+    border-radius: 9px;
+
+    color: #b91c1c;
+
+    font-family: Consolas, "Courier New", monospace;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: left;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 23px;
+
+    background: #3157c7;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 15px rgba(49, 87, 199, 0.20);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #2646a8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px rgba(49, 87, 199, 0.28);
+}
+
+.back-btn:active {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CARD ANIMATION
+========================================= */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================
+   ICON ANIMATION
+========================================= */
+
+@keyframes iconPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(220, 38, 38, 0.18);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(220, 38, 38, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(220, 38, 38, 0);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .error-card {
+        width: 100%;
+
+        padding: 35px 22px;
+
+        border-radius: 18px;
+    }
+
+    .error-icon {
+        width: 72px;
+        height: 72px;
+
+        font-size: 32px;
+    }
+
+    .error-card h2 {
+        font-size: 23px;
+    }
+
+    .error-msg {
+        font-size: 13px;
+    }
+
+    .back-btn {
+        width: 100%;
+    }
+}

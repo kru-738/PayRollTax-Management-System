@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.page-container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 50px auto;
+}
+
+/* Header */
+
+.employee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #e8f0ff;
+    color: #3157c7;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.employee-header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #172033;
+}
+
+.employee-header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* Back Button */
+
+.back-btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #374151;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #3157c7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Main Card */
+
+.table-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 12px 35px rgba(31, 41, 55, 0.08);
+    border: 1px solid #e9edf4;
+}
+
+/* Table Heading */
+
+.table-heading {
+    margin-bottom: 24px;
+}
+
+.table-heading h2 {
+    font-size: 22px;
+    color: #172033;
+    margin-bottom: 6px;
+}
+
+.table-heading p {
+    color: #8a94a6;
+    font-size: 14px;
+}
+
+/* Table Wrapper */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 850px;
+}
+
+thead th {
+    background: #f6f8fc;
+    color: #64748b;
+    padding: 16px 18px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+/* Table Rows */
+
+tbody tr {
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+
+}
+
+tbody td {
+    padding: 18px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+/* Serial Number */
+
+.serial {
+    font-weight: 700;
+    color: #3157c7;
+}
+
+/* Employee Name */
+
+.employee-name {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Bonus */
+
+.bonus {
+    color: #15803d;
+    font-weight: 600;
+}
+
+/* Net Salary */
+
+.net-salary {
+    color: #3157c7;
+    font-weight: 700;
+}
+
+/* Actions */
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Action Buttons */
+
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+/* Update */
+
+.update-btn {
+    background: #eef4ff;
+    color: #3157c7;
+}
+
+.update-btn:hover {
+    background: #3157c7;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Delete */
+
+.delete-btn {
+    background: #fff0f0;
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #dc3545;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    color: #8a94a6;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .page-container {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .employee-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .employee-header h1 {
+        font-size: 27px;
+    }
+
+    .table-card {
+        padding: 18px;
+    }
+
+    .page-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
