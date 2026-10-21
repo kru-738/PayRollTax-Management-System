@@ -43,7 +43,7 @@
 
 <title>Update Employee's Details</title>
 
-<link rel="stylesheet" href="update.css">
+<link rel="stylesheet" href="Css_files/update.css">
 
 </head>
 

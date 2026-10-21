@@ -42,7 +42,7 @@
 <head>
 <meta charset="UTF-8">	
 <title>Show Employee Details</title>
-<link rel="stylesheet" href="show.css">
+<link rel="stylesheet" href="Css_files/show.css">
 </head>
 <body>
 

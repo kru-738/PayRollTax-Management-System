@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <title>Employee Registration</title>
 
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="Css_files/register.css">
 </head>
 
 <body>

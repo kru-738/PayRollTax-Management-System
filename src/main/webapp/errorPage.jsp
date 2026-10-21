@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="errorPage.css">
+<link rel="stylesheet" href="Css_files/errorPage.css">
 </head>
 <body>
 		<div class="error-card">

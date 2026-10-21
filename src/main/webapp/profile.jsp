@@ -68,7 +68,7 @@
 
     <title>Admin Profile</title>
 
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="Css_files/profile.css">
 </head>
 
 <body>

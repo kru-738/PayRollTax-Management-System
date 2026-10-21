@@ -69,7 +69,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Pay Roll Portal</title>
-<link rel="stylesheet" href="payrollPortal.css">
+<link rel="stylesheet" href="Css_files/payrollPortal.css">
 </head>
 <body>  
 <%

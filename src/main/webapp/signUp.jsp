@@ -37,7 +37,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="signUp.css">
+<link rel="stylesheet" href="Css_files/signUp.css">
 </head><body>
 
     <%
